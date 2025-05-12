@@ -9,6 +9,44 @@
         .bloque{background-color: black}
         .bloque__elemento{color: red;}
         .bloque__elemento--modificador{color:skyblue}
+
+        /* CSS sin BEM */
+        .button{
+                display: inline-block;
+                padding: 0.5em 1em;
+                font-size: 1.2rem;
+                text-decoration: none;
+                color: azure;
+                background-color:  royalblue;
+                border-radius: 1.5em;}
+        .button-transparent{
+                display: inline-block;
+                padding: 0.5em 1em;
+                font-size: 1.2rem;
+                text-decoration: none;
+                color: royalblue;
+                background-color:  transparent;
+                border: 1px solid royalblue;
+                border-radius: 1.5em;
+        }
+
+
+        /*CSS con BEM */
+        .button{
+                display: inline-block;
+                padding: 0.5em 1em;
+                font-size: 1.2rem;
+                text-decoration: none;
+                color: azure;
+                background-color:  royalblue;
+                border-radius: 1.5em;}
+        
+        /*Se sobreescribe las propiedades de la clase buttton CSS*/
+        .button--transparent{
+                color: royalblue;  
+                border: 1px solid royalblue;
+                background-color:  transparent;
+        }
     </style>
 </head>
 <body>
@@ -24,6 +62,17 @@
         <div class="bloque__elemento">Elemento 2</div>
         <div class="bloque__elemento--modificador">Elemento 3</div>
     </div>
+
+
+    <!-- HTML sin BEM -->
+    <a href="#" class="button">Soy un Boton sin BEM </a>
+    <a href="#" class="button-transparent">Soy un Boton transparente sin BEM</a>
+
+
+    <!-- HTML con BEM -->
+    <a href="#" class="button">Soy un Boton </a>
+    <a href="#" class="button button--transparent">Soy un Boton transparente </a>
+
 
 
 
