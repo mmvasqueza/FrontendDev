@@ -47,6 +47,40 @@
                 border: 1px solid royalblue;
                 background-color:  transparent;
         }
+
+
+        /*Otro ejemplo de BEM*/
+        /* Bloque */
+        .form {
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+        }
+
+        /* Elementos */
+        .form__input {
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          width: 100%;
+        }
+        
+        .form__button {
+          padding: 10px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        
+        /* Modificador */
+        .form__button--primary {
+          background-color: #007bff;
+          color: white;
+        }
+
+
+
+        
     </style>
 </head>
 <body>
@@ -72,6 +106,12 @@
     <!-- HTML con BEM -->
     <a href="#" class="button">Soy un Boton </a>
     <a href="#" class="button button--transparent">Soy un Boton transparente </a>
+
+
+    <div class="form">
+  <input class="form__input" type="text" placeholder="Escribe tu nombre">
+  <button class="form__button form__button--primary">Enviar</button>
+</div>
 
 
 
