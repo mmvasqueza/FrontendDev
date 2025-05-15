@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Documento Demostracion JavaScript</title>
+</head>
+<body>
+<h1>Número: </h1>
+<script>
+// Este es un comentario en JavaScript 
+const a = document.querySelector('h1').textContent = 'Hola, JavaScript es genial!';
+//window.alert(a + ' ¿No es así?');
+const b = window.URL = 'https://www.scootersoftware.com/download';
+//window.alert(b);
+
+//Ejemplo de JavaScript orientado a objetos 
+//objeto
+const persona = {
+  nombre: "Marcelo",
+  //Metodo
+  saludar() {
+    //Accion
+    console.log(`Hola, soy ${this.nombre}`);
+    //alert(`Hola, soy ${this.nombre}`);
+  },
+
+  Aplaudir() {
+    console.log("Aplaudiendo");
+    //alert("Aplaudiendo");
+  }
+
+};
+//Invocamos el objeto persona y el metodo saludar
+persona.saludar();
+persona.Aplaudir();
+
+//--------------------------------------
+//Ejemplo de JavaScript basado en prototipos
+//Prototipo
+const animal = {
+  hablar() {
+    console.log("Hace un sonido");
+  }
+};
+
+const gato = Object.create(animal);
+gato.hablar(); // "Hace un sonido"
+//--------------------------------------
+//Ejemplo de JavaScript impeativo
+let suma = 0;
+for (let i = 1; i <= 5; i++) {
+  suma += i;
+}
+console.log(suma); // 15
+//--------------------------------------
+//Ejemplo de JavaScript Débilmente tipado
+console.log("5" + 1);   // "51"
+console.log("5" - 1);   // 4
+console.log(null + 1);  // 1
+console.log(undefined + 1); // NaN
+
+
+//--------------------------------------
+//Ejemplo de JavaScript Dinámico
+let x = 10;
+x = "ahora soy texto";
+x = { mensaje: "y ahora soy un objeto" };
+
+const personaje = {};
+personaje.nombre = "Lucía";
+personaje.saludar = function () { alert("Hola JS Dinamico"); };
+//delete personaje.nombre;
+
+</script>
+</body>
+</html>
+
+

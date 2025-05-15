@@ -46,6 +46,9 @@ function listaMenu(){
 
 }
 
-function Retroceder(){
-    const 
+function retroceder() {
+    window.history.back();
 }
+
+// Se puede vincular a un botón, enlace o evento en HTML
+document.getElementById("miBoton").addEventListener("click", retroceder);

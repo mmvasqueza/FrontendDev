@@ -5,79 +5,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demostración de Metodologia Bloque Elemento y Modificador - BEM</title>
     <style>
+    /* Ejemplo de BEM en CSS*/
 
-        .bloque{background-color: black}
-        .bloque__elemento{color: red;}
-        .bloque__elemento--modificador{color:skyblue}
+/* --- Estilos base --- */
+ /* Aplica estilos al tag:body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 1rem;
+  background: #f4f4f4;
+}
 
-        /* CSS sin BEM */
-        .button{
-                display: inline-block;
-                padding: 0.5em 1em;
-                font-size: 1.2rem;
-                text-decoration: none;
-                color: azure;
-                background-color:  royalblue;
-                border-radius: 1.5em;}
-        .button-transparent{
-                display: inline-block;
-                padding: 0.5em 1em;
-                font-size: 1.2rem;
-                text-decoration: none;
-                color: royalblue;
-                background-color:  transparent;
-                border: 1px solid royalblue;
-                border-radius: 1.5em;
-        }
+ /* Bloque */
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  max-width: 400px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+ /* Elemento image*/
+.card__image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+/* Elemento Title*/
+.card__title {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+/* Elemento descripcion*/
+.card__description {
+  font-size: 1rem;
+  color: #555;
+}
+/* Elemento button*/
+.card__button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+/* Modificador del elemento button*/
+.card__button--primary {
+  background-color: #2c3e50;
+  color: #fff;
+}
+
+/* --- Breakpoint para pantallas grandes (escritorio) --- */
+@media (min-width: 1024px) {
+  .card {
+    max-width: 900px;
+  }
+
+  .card__button {
+    font-size: 1.1rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
 
 
-        /*CSS con BEM */
-        .button{
-                display: inline-block;
-                padding: 0.5em 1em;
-                font-size: 1.2rem;
-                text-decoration: none;
-                color: azure;
-                background-color:  royalblue;
-                border-radius: 1.5em;}
-        
-        /*Se sobreescribe las propiedades de la clase buttton CSS*/
-        .button--transparent{
-                color: royalblue;  
-                border: 1px solid royalblue;
-                background-color:  transparent;
-        }
+/* --- Breakpoint para pantallas medianas (tablets) --- */
+@media (min-width: 768px) {
+  .card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    padding: 2rem;
+  }
 
+  .card__image {
+    width: 40%;
+    margin-right: 2rem;
+  }
 
-        /*Otro ejemplo de BEM*/
-        /* Bloque */
-        .form {
-            padding: 20px;
-            background-color: #f5f5f5;
-            border-radius: 8px;
-        }
+  .card__title {
+    font-size: 2rem;
+  }
 
-        /* Elementos */
-        .form__input {
-          padding: 10px;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          width: 100%;
-        }
-        
-        .form__button {
-          padding: 10px 20px;
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
-        }
-        
-        /* Modificador */
-        .form__button--primary {
-          background-color: #007bff;
-          color: white;
-        }
+  .card__description {
+    font-size: 1.2rem;
+  }
+}
 
+/* --- Breakpoint para pantallas pequeñas (móviles) --- */
+@media (max-width: 480px) {
+  .card {
+    padding: 0.5rem;
+    text-align: center;
+  }
+
+  .card__image {
+    width: 30%;
+    height: auto;
+  }
+
+  .card__title {
+    font-size: 1.2rem;
+  }
+
+  .card__description {
+    font-size: 0.9rem;
+  }
+
+  .card__button {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+}
 
 
         
@@ -90,7 +131,7 @@
     <!--Ejemplo de implementacion de metodologia BEM-->
 
     
-    
+<!--     
     <div class="bloque">
         <div class="bloque__elemento">Elemento 1</div>
         <div class="bloque__elemento">Elemento 2</div>
@@ -98,12 +139,9 @@
     </div>
 
 
-    <!-- HTML sin BEM -->
     <a href="#" class="button">Soy un Boton sin BEM </a>
     <a href="#" class="button-transparent">Soy un Boton transparente sin BEM</a>
 
-
-    <!-- HTML con BEM -->
     <a href="#" class="button">Soy un Boton </a>
     <a href="#" class="button button--transparent">Soy un Boton transparente </a>
 
@@ -111,8 +149,28 @@
     <div class="form">
   <input class="form__input" type="text" placeholder="Escribe tu nombre">
   <button class="form__button form__button--primary">Enviar</button>
-</div>
+</div> -->
 
+    <!-- Ejemplo de un bloque con elementos y modificadores -->
+     <!-- invocamos la clase del bloque -->
+    <section class="card">
+        <!-- invocamos la clase del elemento img-->
+        <img src="https://cdn.pixabay.com/photo/2014/12/21/23/41/market-575842_1280.png" alt="Producto" class="card__image">
+        <!-- invocamos la clase del elemento title-->
+        <h2 class="card__title">Producto Destacado</h2>
+        <!-- invocamos la clase del elemento descripcion-->
+        <p class="card__description">Este es un producto de alta calidad.</p>
+        <!-- invocamos la clase del modificador del elemento button-->
+        <button class="card__button card__button--primary">Comprar</button>
+    </section>
+
+    
+  <section class="card">
+    <img src="producto.jpg" alt="Producto" class="card__image">
+    <h2 class="card__title">Producto Destacado</h2>
+    <p class="card__description">Este es un producto de alta calidad.</p>
+    <button class="card__button card__button--primary">Comprar</button>
+  </section>
 
 
 
