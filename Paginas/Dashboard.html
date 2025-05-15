@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sidebar">
+    <h1>DATOS USANDO API FAKE</h1>
+    <div class="logo">Dashboard</div>
+    <!-- Accediendo al DOM con metodo querySelectorAll() -->
+    <ul class="menu">
+      <li>Gestion de usuarios</li>
+      <li>Empleados</li>
+      <li>Viaticos</li>
+      <li>Marcadas</li>
+      <li>Planilla</li>
+      <li>Subsidios</li>
+      <li>Prestamos</li>
+      <li>calendar</li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <div class="navbar">
+      <input type="text" placeholder="Search">
+      <button>Go</button>
+      <div class="user-menu">
+        <span>👤</span>
+        <div class="dropdown">
+          <a href="#">Profile</a>
+          <a href="#">Settings</a>
+          <a href="#">Logout</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="dashboard-header">
+      <h2>Dashboard</h2>
+      <small>Vishweb / Dashboard</small>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>Administracion de Empleados</h3>
+        <div class="card-actions">
+          <button class="delete-btn">Delete</button>
+          <button class="add-btn">Agrega un Nuevo registro</button>
+        </div>
+      </div>
+      <!-- Accediendo al DOM con metodo getElementById() -->
+      <p id="parrafo">Esto es un parrafo de prueba</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th><input type="checkbox"></th>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Direccion</th>
+            <th>Telefono</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>Thomas Hardy</td>
+            <td>Thomasrhardy@gmail.com</td>
+            <td>90# Parkouland Poland Usa</td>
+            <td>(78-526152-9)</td>
+            <td>✏️ 🗑️</td>
+          </tr>
+          <!-- Aquí agregas más filas si quieres -->
+        </tbody>
+      </table>
+
+      <div class="pagination">
+        Visaulizando 5 de 25
+        <button>◀️</button>
+        <button>▶️</button>
+      </div>
+    </div>
+
+    <footer>
+      © 2025 Dashboard Design by Marcelo Vasquez. All Rights Reserved.
+    </footer>
+  </div>
+
+  <script src="./Script.js"></script>
+
+</body>
+</html>
